@@ -22,8 +22,36 @@ class SmartphoneWithCamera(Smartphone):
 
 # Creating instances
 phone = Smartphone("Apple", "iPhone 13", 999)
-phone.make_call("123-456-7890")
-phone.send_message("123-456-7890", "Hello!")
+phone.make_call("254-456-7890")
+phone.send_message("254-456-7890", "Hello!")
 
 camera_phone = SmartphoneWithCamera("Samsung", "Galaxy S21", 799, 108)
 camera_phone.take_photo()
+
+#assignment2
+# Base class
+class Vehicle:
+    def move(self):
+        pass
+
+# Subclass Car
+class Car(Vehicle):
+    def move(self):
+        print("Driving 🚗")
+
+# Subclass Plane
+class Plane(Vehicle):
+    def move(self):
+        print("Flying ✈️")
+
+# Creating instances
+car = Car()
+plane = Plane()
+
+mode_of_transport = input("What mode of transport are you using: ").lower()
+if mode_of_transport == "car":
+    car.move()
+elif mode_of_transport == "plane":
+    plane.move()
+else:
+    print("Unknown mode of transport")
